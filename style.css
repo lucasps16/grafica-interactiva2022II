@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.p_img{ /*Estilo para las imágenes  que se encuentran dentro de una etiqueta p*/
+    position: relative; /*Se asigna una posición relativa*/
+	top: 20px; /*Especifica la posición vertical de la imagen relativa al elemento anterior*/
+    max-width: 625px; /*Especifica el ancho maximo de la imagen*/
+    display: block; /*Especifica la forma en la que se va a mostrar el elemnto */
+    margin-left: auto; /*El navegador calcula la margen izq del elemento*/
+    margin-right: auto;/*El navegador calcula la margen der del elemento*/
+}
+
+.left_img{/*Estilo para las imágenes  que se encuentran en la columna izquierda de la página*/
+    position: relative;
+	max-width:350px;
+	margin-left: 175px;
+    margin-right: auto; 
+    display: block;
+    border-radius: 25px; /*Redondea las esquinas de la imagen*/
+    overflow-x: hidden; /*Elimina el scroll y corta la imagen al finalizar la pagina*/
+    
+}
+
+.intext_img{/*Estilo para imágenes  que se encuentran entre parrafos del texto*/
+    max-width:350px;    
+	margin-left: 100px;
+    border-radius: 25px;
+}
+
+.h_intext_img{/*Estilo para imágenes  que se encuentran entre parrafos del texto de la pagina de habitantes*/
+    max-width:600px;    
+	margin-left: 100px;
+    border-radius: 25px;
+}
+
+.pano_img{/*Estilo para imágenes  panoramicas de gran tamaño*/
+    max-width:750px;
+    margin-right: 200px;
+    border-radius: 25px; 
+}
+.small_img{/*Estilo para imágenes que se deben ver pequñas*/
+    max-width:400px;
+    margin-left:70px;
+    border-radius: 25px; 
+}
+.a_title{/*Estilo para el texto de titulo de página*/
+    margin: auto;
+    text-align: center; /*Centra el texto*/
+    font-family: Arial, Helvetica, sans-serif; /*Asigna la fuente al texto*/
+}
+.link{/*Estilo para los textos que funcionan como link*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px; /*Asigna el tamaño de la fuente*/
+    margin-left: 350px;
+}
+
+.sidebar {/*Estilo para la side bar*/
+    border-radius: 25px;
+    height: 100%; /*Determian cual debe ser la altura de la sidebar*/
+    width: 170px;
+    position: fixed;
+    z-index: 1; /*Coloca la sidebar al frente de los demas elementos*/
+    top: 0;
+    left: 0;
+    background-color: #111111; /*Asigna el color negro al fondo de la sidebar*/
+    overflow-x: hidden;
+    padding-top:20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar a {/*Estilo para los textos dentro de la sidebar*/
+    padding: 6px 8px 6px 16px; /*Asigna el espacio entre el contenido del elemento y su borde, (top derecha bottom izquierda)*/
+    text-decoration: none; /*Elimina las decoraciones del texto, para que no se cambie el color al ser visitados*/
+    font-size: 25px;
+    color: #FFFFFF;
+    display: block;
+}
+
+
+h1 a{/*Estilo para los textos tipo a y h1 que funcionan como link*/
+    text-decoration: none;
+    display: block;
+}
+
+h1 a:visited{/*Estilo para los links visitados*/
+    color: inherit;
+}
+
+h2{/*Estilo para los textos h2*/
+    margin-left: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.lugar_text{  /*Estilo para el texto de la pagina de lugar*/  
+    z-index: 2;
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.habitantes_text{  /*Estilo par el texto de la pagina de habitantes*/  
+    z-index: 2;
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 175px;
+    text-align: justify;
+}
+
+.actividades_text{  /*Estilo par el texto de la pagina de actividades*/  
+    z-index: 2;
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 230px;
+    text-align: justify;
+}
+
+.img_text{ /*Estilo par el texto del pie de foto*/
+    margin-left: 460px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.my_img{ /*Estilo para el texto de las imagenes tomadas por mi*/
+    margin-left: 175px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.a_link{ /*Estilo para los links de la pagina de fuentes*/
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 200px;
+}
+
+.row{/*Estilo para las rows*/
+    display: flex;
+}
+.column {/*Estilo para las columns*/
+    padding: 15px;
+  }
