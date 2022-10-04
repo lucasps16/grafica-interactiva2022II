@@ -22,13 +22,12 @@
 
 .intext_img{/*Estilo para imágenes  que se encuentran entre parrafos del texto*/
     max-width:350px;    
-	margin-left: 100px;
+	margin-left: 50px;
     border-radius: 25px;
 }
 
 .h_intext_img{/*Estilo para imágenes  que se encuentran entre parrafos del texto de la pagina de habitantes*/
-    max-width:600px;    
-	margin-left: 100px;
+    max-width:600px;  
     border-radius: 25px;
 }
 
@@ -103,7 +102,7 @@ h2{/*Estilo para los textos h2*/
     max-width: 600px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-left: 175px;
+    margin-left: 230px;
     text-align: justify;
 }
 
@@ -123,15 +122,24 @@ h2{/*Estilo para los textos h2*/
 }
 
 .my_img{ /*Estilo para el texto de las imagenes tomadas por mi*/
-    margin-left: 175px;
+    
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
-  
+    padding: 10px;
+    text-align: center;
+}
+.my_img_n{ /*Estilo para el texto de las imagenes tomadas por mi*/
+    margin-left: 230px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .a_link{ /*Estilo para los links de la pagina de fuentes*/
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 200px;
+    white-space: nowrap;
+    
 }
 
 .row{/*Estilo para las rows*/
@@ -139,4 +147,303 @@ h2{/*Estilo para los textos h2*/
 }
 .column {/*Estilo para las columns*/
     padding: 15px;
-  }
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+
+#boton_sidebar {
+    display: none; 
+} 
+
+@media only screen and (max-width: 970px){ /*Se selccionó el tamaño de 970, porque si es menor que este los componentes interfieren con la sidebar */
+    header label {
+        display: block;
+        z-index: 30;
+    }
+    header{
+        z-index: 10;
+    }
+
+    .img-btn-menu {
+        position: fixed;
+    }
+    
+    #boton_sidebar:checked ~ .sidebar{
+        display: block;
+    }
+    .sidebar {
+        display:none;
+        border-radius: 25px;
+        height: 100%; /*Determian cual debe ser la altura de la sidebar*/
+        width: 170px;
+        position: fixed;
+        z-index: 1; /*Coloca la sidebar al frente de los demas elementos*/
+        top: 0;
+        left: 0;
+        background-color: #111111; /*Asigna el color negro al fondo de la sidebar*/
+        overflow-x: hidden;
+        padding-top:70px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .sidebar a {/*Estilo para los textos dentro de la sidebar*/
+        padding: 6px 8px 6px 16px; /*Asigna el espacio entre el contenido del elemento y su borde, (top derecha bottom izquierda)*/
+        text-decoration: none; /*Elimina las decoraciones del texto, para que no se cambie el color al ser visitados*/
+        font-size: 15px;
+        color: #FFFFFF;
+        display: block;
+    }
+
+    .my_img{ /*Estilo para el texto de las imagenes tomadas por mi*/
+        padding: 5px;
+        position: static;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+      
+    }
+    .link{ /*Estilo par el texto del pie de foto*/
+        margin-left: 70px;
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+
+    .column .left_img{ 
+        display: none;
+    }
+
+    .column .my_img{
+        font-size: 15px;        
+        margin-left: 70px;
+    }
+    
+    .column .my_img_n{
+        display: none;
+    }
+
+    .column h2{
+        margin-left: 100px;
+        font-family: Arial, Helvetica, sans-serif; /*Asigna la fuente al texto*/
+    
+    }
+
+    .lugar_text{  /*Estilo para el texto de la pagina de lugar*/  
+        z-index: 2;
+        max-width: 800px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;        
+        text-align: justify;
+    }
+    
+    .habitantes_text{  /*Estilo par el texto de la pagina de habitantes*/  
+        z-index: 2;
+        max-width: 720px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 70px;
+        text-align: justify;
+    }
+    
+    .actividades_text{  /*Estilo par el texto de la pagina de actividades*/  
+        z-index: 2;
+        max-width: 800px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 70px;
+        text-align: justify;
+    }
+    
+    .img_text{ /*Estilo par el texto del pie de foto*/
+        margin-left: 460px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .h_intext_img{/*Estilo para imágenes  que se encuentran entre parrafos del texto de la pagina de habitantes*/
+        max-width:650px;    
+        margin-left:auto;
+    }
+    
+    .intext_img{/*Estilo para imágenes  que se encuentran entre parrafos del texto de la pagina de habitantes*/
+        max-width:400px;    
+        margin-left:150px;
+    }
+
+    .pano_img{
+        max-width:700px;
+        margin-right: 70px;
+        border-radius: 25px;  
+    }
+
+    .p_img{ /*Estilo para las imágenes  que se encuentran dentro de una etiqueta p*/
+        position: relative; /*Se asigna una posición relativa*/
+        top: 20px; /*Especifica la posición vertical de la imagen relativa al elemento anterior*/
+        max-width: 650px; /*Especifica el ancho maximo de la imagen*/
+        display: block; /*Especifica la forma en la que se va a mostrar el elemnto */
+        margin-left: auto; /*El navegador calcula la margen izq del elemento*/
+        margin-right: auto;/*El navegador calcula la margen der del elemento*/
+        border-radius: 25px; 
+    }
+
+    .small_img{/*Estilo para imágenes que se deben ver pequñas*/
+        max-width:350px;
+        margin-left:auto;
+        border-radius: 25px; 
+    }
+
+    .a_link{ /*Estilo para los links de la pagina de fuentes*/
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 70px;
+        width: 100px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+}
+
+@media only screen and (max-width: 640px){
+
+    header label {
+        display: block;
+        z-index: 30;
+    }
+    header{
+        z-index: 10;
+    }
+
+    .img-btn-menu {
+        position: fixed;
+    }
+    
+    #boton_sidebar:checked ~ .sidebar{
+        display: block;
+    }
+    .sidebar {
+        display:none;
+        border-radius: 25px;
+        height: 100%; /*Determian cual debe ser la altura de la sidebar*/
+        width: 170px;
+        position: fixed;
+        z-index: 1; /*Coloca la sidebar al frente de los demas elementos*/
+        top: 0;
+        left: 0;
+        background-color: #111111; /*Asigna el color negro al fondo de la sidebar*/
+        overflow-x: hidden;
+        padding-top:70px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .sidebar a {/*Estilo para los textos dentro de la sidebar*/
+        padding: 6px 8px 6px 16px; /*Asigna el espacio entre el contenido del elemento y su borde, (top derecha bottom izquierda)*/
+        text-decoration: none; /*Elimina las decoraciones del texto, para que no se cambie el color al ser visitados*/
+        font-size: 15px;
+        color: #FFFFFF;
+        display: block;
+    }
+
+    .my_img{ /*Estilo para el texto de las imagenes tomadas por mi*/
+        padding: 5px;
+        margin-left: 70px;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+      
+    }
+    .link{ /*Estilo par el texto del pie de foto*/
+        margin-left: 70px;
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .column {/*Estilo para las columns*/
+        padding: 15px;
+    }
+
+    .column .left_img{ 
+        display: none;
+    }
+
+    .column .my_img{
+        font-size: 15px;
+    }
+    
+    .column .my_img_n{
+        display: none;
+    }
+
+    .column h2{
+        margin-left: 100px;
+        font-family: Arial, Helvetica, sans-serif; /*Asigna la fuente al texto*/
+    
+    }
+
+    .lugar_text{  /*Estilo para el texto de la pagina de lugar*/  
+        z-index: 2;
+        max-width: 600px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    
+    .habitantes_text{  /*Estilo par el texto de la pagina de habitantes*/  
+        z-index: 2;
+        max-width: 500px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 70px;
+        text-align: justify;
+    }
+    
+    .actividades_text{  /*Estilo par el texto de la pagina de actividades*/  
+        z-index: 2;
+        max-width: 500px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 70px;
+        text-align: justify;
+    }
+    
+    .img_text{ /*Estilo par el texto del pie de foto*/
+        margin-left: 460px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .h_intext_img{/*Estilo para imágenes  que se encuentran entre parrafos del texto de la pagina de habitantes*/
+        max-width:400px;    
+        margin-left:auto;
+        border-radius: 25px;
+    }
+
+    .pano_img{
+        max-width:530px;
+        margin-right: 70px;
+        border-radius: 25px;  
+    }
+
+    .p_img{ /*Estilo para las imágenes  que se encuentran dentro de una etiqueta p*/
+        position: relative; /*Se asigna una posición relativa*/
+        top: 20px; /*Especifica la posición vertical de la imagen relativa al elemento anterior*/
+        max-width: 600px; /*Especifica el ancho maximo de la imagen*/
+        display: block; /*Especifica la forma en la que se va a mostrar el elemnto */
+        margin-left: auto; /*El navegador calcula la margen izq del elemento*/
+        margin-right: auto;/*El navegador calcula la margen der del elemento*/
+        border-radius: 25px; 
+    }
+
+    .a_link{ /*Estilo para los links de la pagina de fuentes*/
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 70px;
+        width: 100px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+    
+}
